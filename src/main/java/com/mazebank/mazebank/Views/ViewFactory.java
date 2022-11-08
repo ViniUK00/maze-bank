@@ -1,2 +1,4 @@
-package com.mazebank.mazebank.Views;public class ViewFactory {
+package com.mazebank.mazebank.Views;
+
+public class ViewFactory {
 }

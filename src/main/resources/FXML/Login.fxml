@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="login_container" stylesheets="@../Styles/login.css"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mazebank.mazebank.Controllers.LoginController">
+   <VBox prefHeight="400.0" prefWidth="200.0" styleClass="login_logo_container" AnchorPane.bottomAnchor="0.0"
+         AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maze Bank"/>
+   </VBox>
+   <VBox layoutX="236.0" layoutY="35.0" prefHeight="350.0" prefWidth="350.0" styleClass="login_form_container"
+         AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <Label id="choice-prompt_text" text="Choose Your Account Type"/>
+      <ChoiceBox fx:id="acc_selector" prefWidth="150.0" styleClass="account_selector"/>
+      <Label fx:id="payee_address_lbl" text="Payee Address"/>
+      <TextField fx:id="payee_address_field" styleClass="input_field"/>
+      <Label text="Password"/>
+      <TextField fx:id="password_fld" styleClass="input_field"/>
+      <Button fx:id="login_btn" mnemonicParsing="false" text="Button"/>
+      <Label fx:id="error_lbl" styleClass="error_lbl" text="Error"/>
+   </VBox>
 </AnchorPane>
