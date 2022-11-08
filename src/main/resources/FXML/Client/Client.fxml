@@ -6,9 +6,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.mazebank.mazebank.Controllers.Client.ClientController"
-            prefHeight="400.0" prefWidth="600.0">
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
+    <left>
+        <fx:include source="ClientMenu.fxml"/>
+    </left>
 
-</AnchorPane>
+    <center>
+        <fx:include source="Dashboard.fxml"></fx:include>
+    </center>
+
+</BorderPane>
