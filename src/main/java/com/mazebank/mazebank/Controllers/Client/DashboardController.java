@@ -11,7 +11,8 @@ public class DashboardController implements Initializable {
     public Label savings_bal;
     public Label income_lbl;
     public Label expenses_lbl;
-    public ListView transaction_listview;
+
+    public ListView transcations_listview;
     public TextField payee_fld;
     public TextField amount_fld;
     public TextArea message_fld;
