@@ -20,6 +20,7 @@ public class ViewFactory {
 
     // Admin Views
     private AnchorPane createClientView;
+    private AnchorPane clientsView;
     private final ObjectProperty<AdminMenuOptions> adminSelectedMenuItem;
 
     public ViewFactory() {
@@ -108,6 +109,17 @@ public class ViewFactory {
         AdminController controller = new AdminController();
         loader.setController(controller);
         createStage(loader);
+    }
+
+    public AnchorPane getClientsView() {
+        if (clientsView == null) {
+            try {
+                clientsView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Clients.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return clientsView;
     }
 
     public void showLoginWindow() {

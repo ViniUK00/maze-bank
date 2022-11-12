@@ -19,9 +19,17 @@ public class AdminMenuController implements Initializable {
         addListener();
     }
 
-    private void addListener(){}
+    private void addListener() {
+        create_client_btn.setOnAction(event -> onCreateClient());
+        clients_btn.setOnAction(event -> onClients());
+    }
+
 
     private void onCreateClient() {
         Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.CREATE_CLIENT);
+    }
+
+    private void onClients() {
+        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.CLIENTS);
     }
 }
