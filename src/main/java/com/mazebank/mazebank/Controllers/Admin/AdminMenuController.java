@@ -1,5 +1,6 @@
 package com.mazebank.mazebank.Controllers.Admin;
 
+import com.mazebank.mazebank.Models.Model;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
@@ -13,5 +14,13 @@ public class AdminMenuController implements Initializable {
     public Button logout_btn;
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {}
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        addListener();
+    }
+
+    private void addListener(){}
+
+    private void onCreateClient() {
+        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set("CreateClient");
+    }
 }
