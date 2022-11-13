@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="50.0" prefWidth="750.0" styleClass="client_cell_container"
+            stylesheets="@../../Styles/ClientCell.css" xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mazebank.mazebank.Controllers.Admin.ClientCellController">
+   <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" AnchorPane.leftAnchor="14.0"
+         AnchorPane.topAnchor="14.0"/>
+   <HBox layoutX="59.0" layoutY="-28.0" prefHeight="40.0" prefWidth="550.0" AnchorPane.leftAnchor="60.0"
+         AnchorPane.topAnchor="5.0">
+      <Label fx:id="fName_lbl" text="Ervin"/>
+      <Label fx:id="lName_lbl" text="Bilo"/>
+      <Label fx:id="pAddress_lbl" text="\@eBilo1"/>
+      <Label fx:id="ch_acc_lbl" styleClass="acc_display_lbl" text="2546997"/>
+      <Label fx:id="sv_acc_lbl" styleClass="acc_display_lbl" text="23333034"/>
+      <Label fx:id="date_lbl" text="13-11-2022"/>
+   </HBox>
+   <Button fx:id="delete_btn" layoutX="659.0" layoutY="9.0" mnemonicParsing="false" styleClass="delete_btn"
+           text="Delete" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="12.0"/>
+</AnchorPane>
