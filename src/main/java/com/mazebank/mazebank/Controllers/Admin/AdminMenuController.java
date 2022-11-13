@@ -2,6 +2,7 @@ package com.mazebank.mazebank.Controllers.Admin;
 
 import com.mazebank.mazebank.Models.Model;
 import com.mazebank.mazebank.Views.AdminMenuOptions;
+import com.mazebank.mazebank.Views.ClientMenuOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
@@ -22,6 +23,7 @@ public class AdminMenuController implements Initializable {
     private void addListener() {
         create_client_btn.setOnAction(event -> onCreateClient());
         clients_btn.setOnAction(event -> onClients());
+        deposint_btn.setOnAction(event -> onDeposit());
     }
 
 
@@ -31,5 +33,9 @@ public class AdminMenuController implements Initializable {
 
     private void onClients() {
         Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.CLIENTS);
+    }
+
+    private void onDeposit() {
+        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.DEPOSIT);
     }
 }
