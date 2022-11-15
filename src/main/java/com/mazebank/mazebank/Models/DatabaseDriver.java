@@ -1,11 +1,11 @@
 package com.mazebank.mazebank.Models;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class DatabaseDriver {
     private Connection conn;
+
+
 
     public DatabaseDriver() {
         try {
@@ -16,8 +16,19 @@ public class DatabaseDriver {
     }
 
     /*
-    * Client Section
-    * */
+     * Client Section
+     * */
+    public ResultSet getClientData(String pAddress, String password) {
+        Statement statement;
+        ResultSet resultSet = null;
+        try {
+            statement = this.conn.createStatement();
+            resultSet = statement.executeQuery("SELECT * FROM Clients WHERE PayeeAddress='"+pAddress+"' AND Password='"+password+"';");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
+    }
 
     /*
      * Admin Section
