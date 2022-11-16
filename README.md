@@ -1,5 +1,5 @@
 <div align="right">
-  <img src="https://img.shields.io/badge/Completion-40%25-blue.svg" />
+  <img src="https://img.shields.io/badge/Completion-80%25-blue.svg" />
   </a>
 </div>
 
@@ -21,6 +21,7 @@ You can run the demo on your local machine, please follow the instructions in [G
 - [JAVA](https://reactjs.org/)
 - [JavaFX](https://openjfx.io/)
 - [CSS](https://web.dev/learn/css/)
+- [SQLite](https://www.sqlite.org/index.html)
 
 
 # Getting Started
